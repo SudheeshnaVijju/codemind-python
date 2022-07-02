@@ -1,11 +1,11 @@
 n=int(input())
-t=abs(n)
+t=n
+n=abs(n)
 s=0
-while(t!=0):
-    d=t%10
-    t=t//10
-    s=s*10+d
-if(n>0):
-    print(s)
+while(n):
+    s=s*10+(n%10)
+    n//=10
+if(t<0):
+    print(s-(2*s))
 else:
-    print(-s)
+    print(s)
