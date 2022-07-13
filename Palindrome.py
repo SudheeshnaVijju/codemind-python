@@ -1,11 +1,14 @@
+def pan(n):
+    t=n
+    s=0
+    while(n):
+        s=s*10+(n%10)
+        n//=10
+    if(s==t):
+        return True
+    return False
 n=int(input())
-t=n
-s=0
-while(n!=0):
-    d=n%10
-    n=n//10
-    s=s*10+d
-if(s==t):
-    print('True')
+if(pan(n)):
+    print(True)
 else:
-    print('False')
+    print(False)
