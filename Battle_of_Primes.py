@@ -7,9 +7,9 @@ def prime(n):
     return 1
 n=int(input())
 m=int(input())
-i=1
+c=1
 while(1):
-    if(prime(n+m+i)):
-        print(i)
+    if(prime(n+m+c)):
+        print(c)
         break
-    i+=1
+    c+=1
