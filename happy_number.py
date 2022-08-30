@@ -1,25 +1,28 @@
-def ds(n):
+def su(n):
     s=0
     while(n):
-        s=s+pow((n%10),2)
+        s+=((n%10)**2)
         n//=10
     return s
-def count(n):
+def dc(n):
     c=0
     while(n):
-        c+=1
         n//=10
+        c+=1
     return c
-
 n=int(input())
-s=ds(n)
-while(True):
-    if(count(s)>1):
-        s=ds(s)
-    else:
-        if(s==1 or s==7):
-            print("True")
-        else:
-            print('False')
-        break
+if(dc(n)==1):
+    if(n==1 or n==7):
+        print(True)
+else:
+    while(1):
+        s=su(n)
+        if(dc(s)==1 and s==1 or s==7):
+            print(True)
+            break
+        elif(dc(s)==1 and s!=1 and s!=7):
+            print(False)
+            break
+        n=s
+        
     
