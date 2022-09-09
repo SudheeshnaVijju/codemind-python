@@ -1,10 +1,7 @@
 s=input()
-s=set(list(s))
-b=''
+s=set(list(s.lower()))
+c=0
 for i in s:
-    if(ord(i)>=65 and ord(i)<=90):
-        b=b+chr(ord(i)+32)
-    elif(i!=' '):
-        b+=i
-b=set(list(b))
-print(len(b))
+    if(i==' '):
+        c+=1
+print(len(s)-c)
