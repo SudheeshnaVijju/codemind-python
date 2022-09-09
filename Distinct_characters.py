@@ -1,8 +1,8 @@
 s=input()
-s=list(s.lower())
+s=set(list(s.lower()))
 k=''
 for i in s:
-    if(i!=' ' and s.count(i)==1):
+    if(i!=' '):
         k+=i
 k=''.join(sorted(k))
 print(k)
