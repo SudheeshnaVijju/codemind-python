@@ -1,14 +1,14 @@
 s=input()
+s=s.lower()
 a='aeiou'
-c=0
-b=''
+k=''
 for i in s:
-    if i in a:
-        b=b+i
+    if(i in a):
+        k+=i
+c=0
 for i in a:
-    if (i in a and i not in b):
+    if i not in k:
         print(i,end=' ')
         c=1
-if(c!=1):
+if(c==0):
     print('0')
-        
