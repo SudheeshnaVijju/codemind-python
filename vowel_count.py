@@ -1,8 +1,7 @@
 s=input()
-a=0
-c='aeiouAEIOU'
+c=0
+a='AEIOUaeiou'
 for i in s:
-    if i in c:
-        a+=1
-print(a)
-        
+    if i in a:
+        c+=1
+print(c)
