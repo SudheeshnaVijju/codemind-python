@@ -1,10 +1,7 @@
 s=input()
-ch=input()
-if ch in s:
-    print(True)
-    for i in range(0,len(s)):
-        if(ch==s[i]):
-            print(i)
-            break
+k=input()
+if k in s:
+    print("True")
+    print(s.index(k))
 else:
-    print(False)
+    print("False")
