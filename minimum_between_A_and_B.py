@@ -1,11 +1,13 @@
 n=int(input())
 a=list(map(int,input().split()))
-x,y=map(int,input().split())
-s=[]
+k=list(map(int,input().split()))
+x=min(k)
+f=[]
+y=max(k)
 for i in a:
     if(i>=x and i<=y):
-        s.append(i)
-if(len(s)>0):
-    print(min(s))
-else:
+        f.append(i)
+if(len(f)==0):
     print('-1')
+else:
+    print(min(f))
