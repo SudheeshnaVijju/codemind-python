@@ -1,31 +1,22 @@
-n=int(input())
-a=n
-t=n
-c=0
-s=0
-while(n>0):
-    c+=1
+def prime(n):
+    if(n==1):
+        return 0
     for i in range(2,int(n**0.5)+1):
         if(n%i==0):
-            break
-    else:
-            #print(n)
+            return 0
+    return 1
+n=int(input())
+c=0
+t=n
+while(1):
+    if(prime(n+c)):
+        break
+    c+=1
+while(n):
+    if(prime(n)):
         break
     n-=1
-while(t>0):
-    s+=1
-    for i in range(2,int(t**0.5)+1):
-        if(t%i==0):
-            break
-    else:
-            #print(t)
-        break
-    t+=1
-if(s<c):
-    print(t-a)
+if((t-n)<c):
+    print(t-n)
 else:
-    print(a-n)
-    
-    
-        
-            
+    print(c)
