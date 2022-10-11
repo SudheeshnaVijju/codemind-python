@@ -1,32 +1,26 @@
-x=int(input())
-for y in range(x):
+import math
+def prime(n):
+    if(n==1):
+        return 0
+    for i in range(2,int(math.sqrt(n))+1):
+        if(n%i==0):
+            return 0
+    return 1
+t=int(input())
+for i in range(t):
     n=int(input())
+    c=1
     t=n
-    c=0
-    s=0
-    while(n>0):
+    while(1):
+        if(prime(n+c)):
+            break
         c+=1
-        for i in range(2,int(n**0.5)+1):
-            if(n%i==0):
-                break
-        else:
-            #print(n)
+    while(n):
+        if(prime(n)):
             break
         n-=1
-    while(t>0):
-        s+=1
-        for i in range(2,int(t**0.5)+1):
-            if(t%i==0):
-                break
-        else:
-            #print(t)
-            break
-        t+=1
-    if(s>=c):
+    if((t-n)<=c):
         print(n)
-    else:
-        print(t)
+    elif(c<(t-n)):
+        print(t+c)
     
-    
-        
-            
