@@ -1,16 +1,25 @@
+from math import sqrt
+def isf(n):
+    k=0
+    arr=[k]
+    a=0
+    b=1
+    c=a+b
+    while(c<n):
+        arr.remove(k)
+        arr.append(c)
+        k=c
+        a=b
+        b=c
+        c=a+b
+    arr.append(c)
+    return arr
 n=int(input())
-x=0
-y=1
-while(1):
-    if(n<x):
-        if(abs(n-y)>abs(x-n)):
-            print(x)
-        elif(abs(n-y)==abs(x-n)):
-            print(y,x)
-        else:
-            print(y)
-        break
-    t=x
-    x=x+y
-    y=t
-    
+p=isf(n)
+if(n-p[0]==p[1]-n):
+    print(p[0],end=' ')
+    print(p[1],end='')
+elif(n-p[0]<p[1]-n):
+    print(p[0])
+elif(n-p[0]>p[1]-n):
+    print(p[1])
