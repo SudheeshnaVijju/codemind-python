@@ -1,8 +1,9 @@
-s=input()
-s=set(list(s.lower()))
-k=''
-for i in s:
-    if(i!=' '):
-        k+=i
-k=''.join(sorted(k))
-print(k)
+s=list(input().lower())
+p='abcdefghijklmnopqrstuvwxyz'
+ns=''
+while ' ' in s:
+    s.remove(' ')
+for i in p:
+    if s.count(i)==1:
+        ns=ns+i
+print(ns)
