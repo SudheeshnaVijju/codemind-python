@@ -1,0 +1,6 @@
+n=int(input())
+a=list(map(int,input().split()))
+a=list(set(a))
+a.sort(reverse=True)
+if(n>=3):print(a[2])
+else:print(max(a))
