@@ -1,6 +1,7 @@
 s=input().split()
+a=[]
 for i in s:
-    mx,mi=0,0
-    mx=mx+ord(max(i))
-    mi=mi+ord(min(i))
-    print(abs(mx-mi),end=' ')
+    m=0
+    i=''.join(sorted(i))
+    a.append(abs(ord(i[0])-ord(i[len(i)-1])))
+print(*a)
