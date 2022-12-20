@@ -1,3 +1,4 @@
-s=input().split()
+s=input().lower().split()
 for i in s:
-    print(min(i),max(i),end=' ')
+    i=''.join(sorted(i))
+    print(i[0],i[len(i)-1],end=' ')
