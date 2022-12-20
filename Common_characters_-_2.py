@@ -1,10 +1,11 @@
 s=input().lower().split()
-k,c=s[0],0
+k=s[0]
+p=''
 for i in k:
-    p=0
+    c=0
     for j in s:
-        if i in j:
-            p+=1
-    if p==len(s):
-        c+=1
-print(c)
+        if i not in j:
+            break
+    else:
+        p+=i
+print(len(p))
