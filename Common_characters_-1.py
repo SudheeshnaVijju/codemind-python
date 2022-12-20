@@ -1,13 +1,13 @@
 s=input().lower().split()
-k,c,ns=s[0],0,''
+k=s[0]
+p=''
 for i in k:
-    p=0
     for j in s:
-        if i in j:
-            p+=1
-    if p==len(s):
-        ns+=i
-if ns=='':
-    print('-1')
+        if i not in j:
+            break
+    else:
+        p+=i
+if(len(p)>0):
+    print(p)
     exit()
-print(ns)
+print('-1')
