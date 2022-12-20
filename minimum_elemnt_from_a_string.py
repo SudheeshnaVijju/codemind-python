@@ -1,9 +1,9 @@
-k=input().split()
-s=k[len(k)-1]
-m='z'
-for i in s:
-    if(i<m):
-        m=i
-if m.lower() in s:
-    m=m.lower()
-print(m)
+s=input().split()
+s=s[len(s)-1]
+s=set(s)
+s=''.join(sorted(s))
+s=s[0:2]
+if(ord(s[1])-ord(s[0])==32):
+    print(s[1])
+else:
+    print(s[0])
