@@ -1,22 +1,11 @@
-def ds(n):
+n=int(input())
+def fun(n):
     s=0
     while(n):
-        s=s+(n%10)
+        x=n%10
+        s+=x
         n//=10
     return s
-def count(n):
-    c=0
-    while(n):
-        c+=1
-        n//=10
-    return c
-
-n=int(input())
-s=ds(n)
-while(True):
-    if(count(s)>1):
-        s=ds(s)
-    else:
-        print(s)
-        break
-    
+while(n>10):
+    n=fun(n)
+print(n)
